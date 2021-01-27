@@ -1,0 +1,138 @@
+\documentclass[pdf]{beamer}
+\mode<presentation>{\usetheme{Warsaw}}
+\usepackage{array}
+\title{Linear Algebra}
+\subtitle{Chapter 3}
+\author{To Thai Duong}
+\institute{ICT - 01 K65}
+\date{January 2021}
+\AtBeginSection[]
+{
+\begin{frame}{Overview}
+\tableofcontents[currentsection]
+\end{frame}
+}
+\begin{document}
+\begin{frame}
+\titlepage
+\end{frame}
+\begin{frame}{Overview}
+\tableofcontents
+\end{frame}
+\section{Vector space}
+\begin{frame}{Concepts}
+\setlength{\textwidth}{11.2cm}
+    \begin{block}{Definition}
+    Let $V$ be non-empty set and $\mathbb{K}$ be a field. Two operations are defined as follows.
+    \begin{enumerate}
+        \item[i)] The first operation, called vector addition or simply additon
+        \begin{displaymath}
+        \begin{array}
+                     "+" : V x V \rightarrow V\\
+                    (u,v) \rightarrow u+v   
+        \end{array}
+        \end{displaymath}
+        \item[ii)] The second operation, called scalar multiplication
+        \begin{displaymath}
+        \begin{array} 
+                     "." : K x V \rightarrow V\\
+                    (k,v) \rightarrow kv   
+        \end{array}
+        \end{displaymath}
+    \end{enumerate}
+    \end{block}
+\end{frame}
+\begin{frame}{Concepts}
+    \setlength{\textwidth}{11.2cm}
+    \begin{block}{Definition}
+    Now, $(V;+;.)$ is called a vector space over $\mathbb{K}$ if eight axioms hold
+    \begin{table}
+        \begin{tabular}{|m{3.2cm}|m{7cm}|}
+            \hline
+            Axiom & Meaning\\ 
+            \hline
+            1) Associativity of addition & $u+(v+w)=(u+v)+w,u,v,w \in V$\\
+            \hline
+            2) Commutativity of addition & $u+v=v+u,u,v \in V$\\
+            \hline
+            3) Identity  element  of  addition & There exists an element $0 \in V$, called the zero vector, such that $v+ 0 =v,\forall v \in V$\\
+            \hline
+            4) Inverse elements of addition & For every $v \in V$, there exists an element $−v \in V$, called the additive inverse of v,such that $v+ (−v) = 0$\\
+            \hline
+        \end{tabular}
+    \end{table}
+    \end{block}
+\end{frame}
+\begin{frame}{Concepts}
+    \setlength{\textwidth}{11.2cm}
+    \begin{block}{Definition}
+    \begin{table}
+        \begin{tabular}{|m{3.2cm}|m{7cm}|}
+            \hline
+            Axiom & Meaning\\ 
+            \hline
+            5) Compatibility of scalarmultiplication & $a(bv)=(ab)v,a,b \in \mathbb{K}, v \in V$\\
+            \hline
+            6) Identity element of scalar multiplipication & $1v=v$, where 1 denotes the multiplicative identity in $\mathbb{K}$ \\
+            \hline
+            7)  Distributivity  of  scalar multiplication with respect to vector addition & $\alpha(u+v)=\alpha u+\alpha v, \alpha \in  $\mathbb{K}$ ,u,v \in V$\\
+            \hline
+            8)  Distributivity  of  scalar multiplication with respect to field addition & $(a+b)v=av+bv,a,b \in \mathbb{K}, v \in V$\\
+            \hline
+        \end{tabular}
+        \label{tab:my_label}
+    \end{table}
+    \end{block}
+\end{frame}
+\begin{frame}{Vector space}
+\setlength{\textwidth}{11.2cm}
+    \begin{block}{Properties}
+    Let V be a $\mathbb{R}$-vector space. Hence,
+    \begin{enumerate}
+        \item The zero vector (0) is unique
+        \item The inverse vector of each vector $v$, denoted by $-v$, is unique.
+        \item If $\lambda$v = 0, then 
+            $\left\[
+            \begin{array}{}
+            \lambda =0\\
+            v = 0 (The zero vector)
+            \end{array}
+            \right.$
+    \end{enumerate}
+    \end{block}
+\end{frame}
+\begin{frame}{Illustration of a vector space}
+    \begin{columns}
+    \column{0.65\textwidth}
+    \includegraphics[height=7cm,width=6cm]{vector space.png}
+    \column{0.35\textwidth}
+    \begin{block}{Vector space}
+    A vector space (also called a linear space) is a set of objects called vectors, which may be added together and multiplied ("scaled") by numbers, called scalars.
+    \end{block}
+    \end{columns}
+\end{frame}
+\section{Subspace}
+\begin{frame}{Subspace}
+\setlength{\textwidth}{11.2cm}
+    \begin{block}{Definition}
+    Let $(V,+,.)$ be a vector space over field $\mathbb{K}$ an $W\neq\varnothing$ be a subset of $V$. Now, $W$ is called a subspace of $V$ if $(W,+,.)$ is vector space. 
+    \end{block}
+    \begin{block}{Theorem}
+    Let $(V,+,.)$ be a vector space over field $\mathbb{K}$ and $W\neq\varnothing$ be a subset of $V$ .Now,$W$ is called a subspace of $V$ if $W$ is closed under two operations in $V$, i.e.
+    \begin{itemize}
+        \item[i)] $\forall x,y \in W: x+y \in W$
+        \item[ii)] $\forall x \in W, \forall k \in K: kx \in W$
+    \end{itemize}
+    \end{block}
+    Remarks\\
+    Two above conditions are equivalent to\\
+    \begin{table}
+    \centering
+    \begin{tabular}{|c|}
+         \hline
+         $\forall x,y \in W, \forall k,l \in W: kx+ly \in W$\\
+         \hline
+    \end{tabular}
+    \end{table}
+\end{frame}
+\end{document}
